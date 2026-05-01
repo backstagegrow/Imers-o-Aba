@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Business Academy | O Caminho do Dono</title>
+    <meta name="description" content="Transforme-se de escravo da operação em CEO de elite. Imersão presencial de 3 dias para donos de negócios em Food Service e PMEs.">
+    
+    <!-- Scripts & Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Design System Tokens -->
+    <link rel="stylesheet" href="../assets/css/brand.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',
+                            gold: '#C9A24A',
+                            'gold-light': '#E6C879',
+                            ivory: '#F5EFE0'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom transitions for reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-brand-ivory selection:bg-brand-gold selection:text-brand-black">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="../assets/logos/aba-logo.png" alt="ABA Logo" class="h-12 w-auto">
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#problemas" class="aba-small hover:text-brand-gold transition-colors">O Problema</a>
+                <a href="#metodologia" class="aba-small hover:text-brand-gold transition-colors">Metodologia</a>
+                <a href="#mentores" class="aba-small hover:text-brand-gold transition-colors">Mentores</a>
+                <a href="#vaga" class="aba-btn-primary py-2 px-6 text-xs">Garantir Vaga</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-vignette">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10">
+            <div class="reveal">
+                <div class="aba-eyebrow mb-6">Imersão Presencial · 3 Dias</div>
+                <h1 class="aba-h1 mb-8">
+                    DE ESCRAVO DA OPERAÇÃO A <em class="italic">CEO DE ELITE</em>: O CAMINHO PARA UMA EMPRESA QUE LUCRA SEM VOCÊ.
+                </h1>
+                <p class="aba-lead mb-10 max-w-xl">
+                    Pare de apagar incêndios 14 horas por dia. Conheça a metodologia que já gerou mais de R$ 10 milhões e transforme seu "emprego caro" em um negócio de escala real.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#vaga" class="aba-btn-primary">QUERO SAIR DO OPERACIONAL</a>
+                    <div class="flex items-center px-4">
+                        <div class="flex -space-x-3 mr-4">
+                            <img src="../assets/img/mentores/lucas-silva.webp" class="w-10 h-10 rounded-full border-2 border-brand-black">
+                            <img src="../assets/img/mentores/jose-ricardo.webp" class="w-10 h-10 rounded-full border-2 border-brand-black">
+                            <img src="../assets/img/mentores/robert.webp" class="w-10 h-10 rounded-full border-2 border-brand-black">
+                        </div>
+                        <span class="aba-small">+500 Negócios Acelerados</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative reveal delay-300">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-gold/50 to-transparent blur opacity-20"></div>
+                <div class="relative border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="../assets/img/hero/hero_transformation.jpg" alt="Transformação Alpha" class="w-full grayscale-[20%] contrast-110">
+                    <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-brand-black to-transparent">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-brand-gold text-brand-black px-3 py-1 rounded text-xs font-bold uppercase tracking-tighter">Antes</div>
+                            <span class="aba-small text-white/80">Escravo da Operação</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-gold"></i>
+                            <div class="bg-brand-gold text-brand-black px-3 py-1 rounded text-xs font-bold uppercase tracking-tighter">Depois</div>
+                            <span class="aba-small text-white/80">CEO de Elite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problemas" class="section-padding hairline-gold bg-brand-black/50">
+        <div class="max-w-4xl mx-auto px-6 text-center reveal">
+            <div class="aba-eyebrow mb-4">O Diagnóstico</div>
+            <h2 class="aba-h2 mb-12">Você tem uma empresa ou um <em class="italic text-brand-gold">emprego caro</em>?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="aba-card text-left p-8">
+                    <i data-lucide="clock" class="text-brand-gold mb-6 w-10 h-10"></i>
+                    <h3 class="aba-h3 text-xl mb-4">Operação Infinita</h3>
+                    <p class="aba-body text-sm">Você fatura, mas trabalha 14 horas por dia e não vê a cor do dinheiro no final do mês.</p>
+                </div>
+                <div class="aba-card text-left p-8">
+                    <i data-lucide="users" class="text-brand-gold mb-6 w-10 h-10"></i>
+                    <h3 class="aba-h3 text-xl mb-4">Refém do Time</h3>
+                    <p class="aba-body text-sm">Seus funcionários são seu maior gargalo e você sente que nada funciona se você não estiver presente.</p>
+                </div>
+                <div class="aba-card text-left p-8">
+                    <i data-lucide="trending-down" class="text-brand-gold mb-6 w-10 h-10"></i>
+                    <h3 class="aba-h3 text-xl mb-4">Escala Travada</h3>
+                    <p class="aba-body text-sm">Você quer crescer, mas tem medo de quebrar se tirar 15 dias de férias hoje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section id="metodologia" class="section-padding bg-vignette">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16 reveal">
+                <div class="max-w-2xl">
+                    <div class="aba-eyebrow mb-4">O Caminho do Dono</div>
+                    <h2 class="aba-h2">Os 12 Pilares Estratégicos para a <em class="italic text-brand-gold">Escala Real</em>.</h2>
+                </div>
+                <p class="aba-body text-white/60 mb-2 md:mb-0">Uma metodologia validada em mais de 500 operações de Food Service.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+                <!-- Pillars iterate -->
+                <div class="aba-card group">
+                    <div class="aba-text-engrave text-4xl font-display mb-6">01</div>
+                    <h4 class="aba-h4 text-lg mb-3">Mindset do Dono</h4>
+                    <p class="aba-body text-xs leading-relaxed text-white/50 group-hover:text-white/80 transition-colors">Saia da mentalidade de 'faz-tudo' e assuma a postura de estrategista.</p>
+                </div>
+                <div class="aba-card group">
+                    <div class="aba-text-engrave text-4xl font-display mb-6">02</div>
+                    <h4 class="aba-h4 text-lg mb-3">Processos e Fluxos</h4>
+                    <p class="aba-body text-xs leading-relaxed text-white/50 group-hover:text-white/80 transition-colors">Padronize sua operação para que ela rode sozinha, com ou sem você.</p>
+                </div>
+                <div class="aba-card group">
+                    <div class="aba-text-engrave text-4xl font-display mb-6">03</div>
+                    <h4 class="aba-h4 text-lg mb-3">Gestão de Pessoas</h4>
+                    <p class="aba-body text-xs leading-relaxed text-white/50 group-hover:text-white/80 transition-colors">Contrate, treine e retenha talentos que vestem a camisa do negócio.</p>
+                </div>
+                <div class="aba-card group">
+                    <div class="aba-text-engrave text-4xl font-display mb-6">04</div>
+                    <h4 class="aba-h4 text-lg mb-3">Engenharia de Cardápio</h4>
+                    <p class="aba-body text-xs leading-relaxed text-white/50 group-hover:text-white/80 transition-colors">Maximize seu lucro através de uma análise técnica de mix e margem.</p>
+                </div>
+                <!-- ... other pillars -->
+                <div class="col-span-full py-8 text-center">
+                    <p class="aba-small text-brand-gold">E mais 8 pilares fundamentais revelados na Imersão...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section id="mentores" class="section-padding bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <div class="aba-eyebrow mb-4">Autoridade</div>
+                <h2 class="aba-h2">Mentores que vivem o que ensinam.</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center reveal">
+                    <div class="relative w-64 h-64 mx-auto mb-8 rounded-full overflow-hidden border-2 border-brand-gold/30">
+                        <img src="../assets/img/mentores/lucas-silva.webp" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <h4 class="aba-h4">Lucas Silva</h4>
+                    <p class="aba-small text-brand-gold mb-4 uppercase">CEO Alpha Business</p>
+                    <p class="aba-body text-sm text-white/60">Estrategista de negócios com mais de 15 anos de experiência e +500 empresas aceleradas.</p>
+                </div>
+                <div class="text-center reveal delay-150">
+                    <div class="relative w-64 h-64 mx-auto mb-8 rounded-full overflow-hidden border-2 border-brand-gold/30">
+                        <img src="../assets/img/mentores/jose-ricardo.webp" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <h4 class="aba-h4">José Ricardo</h4>
+                    <p class="aba-small text-brand-gold mb-4 uppercase">Mentor de Expansão</p>
+                    <p class="aba-body text-sm text-white/60">Especialista em franchising e estruturação de processos para escala nacional.</p>
+                </div>
+                <div class="text-center reveal delay-300">
+                    <div class="relative w-64 h-64 mx-auto mb-8 rounded-full overflow-hidden border-2 border-brand-gold/30">
+                        <img src="../assets/img/mentores/robert.webp" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <h4 class="aba-h4">Robert CFO</h4>
+                    <p class="aba-small text-brand-gold mb-4 uppercase">Estrategista Financeiro</p>
+                    <p class="aba-body text-sm text-white/60">Especialista em DRE, fluxo de caixa e inteligência financeira para PMEs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding bg-vignette overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <div class="aba-eyebrow mb-4">Prova Social</div>
+                <h2 class="aba-h2">Resultados Reais de Donos Reais.</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+                <div class="aba-card p-0 overflow-hidden group">
+                    <video class="w-full aspect-[9/16] object-cover" poster="../assets/img/hero/hero_transformation.jpg">
+                        <source src="../assets/videos/depoimentos/vinicius.mp4" type="video/mp4">
+                    </video>
+                    <div class="p-6">
+                        <p class="aba-quote text-lg mb-2">"Minha empresa lucra 3x mais."</p>
+                        <p class="aba-small text-brand-gold">— Vinícius, Franqueado</p>
+                    </div>
+                </div>
+                <div class="aba-card p-0 overflow-hidden group">
+                    <video class="w-full aspect-[9/16] object-cover" poster="../assets/img/hero/hero_transformation.jpg">
+                        <source src="../assets/videos/depoimentos/debora.mp4" type="video/mp4">
+                    </video>
+                    <div class="p-6">
+                        <p class="aba-quote text-lg mb-2">"Recuperei minha liberdade."</p>
+                        <p class="aba-small text-brand-gold">— Débora, Restaurante</p>
+                    </div>
+                </div>
+                <div class="aba-card p-0 overflow-hidden group">
+                    <video class="w-full aspect-[9/16] object-cover" poster="../assets/img/hero/hero_transformation.jpg">
+                        <source src="../assets/videos/depoimentos/marcio.mp4" type="video/mp4">
+                    </video>
+                    <div class="p-6">
+                        <p class="aba-quote text-lg mb-2">"Escalamos com método."</p>
+                        <p class="aba-small text-brand-gold">— Márcio, Franqueado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Offer -->
+    <section id="vaga" class="section-padding bg-brand-gold text-brand-black text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 reveal">
+            <h2 class="aba-h1 mb-6 text-brand-black">SUA MUDANÇA DE JOGO COMEÇA AQUI.</h2>
+            <p class="aba-lead mb-12 text-brand-black/80 font-bold">
+                As vagas para a próxima Imersão são limitadas a apenas 48 donos de negócios. Não perca a chance de transformar sua realidade.
+            </p>
+            <div class="bg-brand-black text-brand-ivory p-8 rounded-2xl shadow-2xl mb-12 max-w-md mx-auto">
+                <div class="text-xs uppercase tracking-widest text-brand-gold mb-4">Investimento Especial</div>
+                <div class="text-5xl font-display mb-4">R$ 2.497</div>
+                <p class="aba-small text-white/50 mb-8">ou em 12x no cartão de crédito</p>
+                <a href="#" class="aba-btn-primary w-full py-5">GARANTIR MINHA VAGA AGORA</a>
+            </div>
+            <div class="flex items-center justify-center space-x-8">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    <span class="text-xs font-bold uppercase">Garantia Incondicional</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="lock" class="w-5 h-5"></i>
+                    <span class="text-xs font-bold uppercase">Pagamento Seguro</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-brand-black border-t border-white/5 text-center">
+        <img src="../assets/logos/aba-logo.png" alt="ABA Logo" class="h-10 mx-auto mb-8 opacity-50 grayscale">
+        <p class="aba-small text-white/30">&copy; 2026 Alpha Business Academy. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Reveal on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
