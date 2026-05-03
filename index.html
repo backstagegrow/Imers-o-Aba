@@ -383,7 +383,7 @@
         </div>
         <div class="reveal relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
             <video class="dep-video w-full" controls preload="metadata">
-                <source src="./assets/videos/Institucional horizontal/0501 (1).mp4" type="video/mp4">
+                <source src="./assets/videos/Institucional horizontal/0501 (1).mp4#t=0.001" type="video/mp4">
             </video>
         </div>
     </div>
@@ -402,7 +402,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
             <div class="aba-card p-0 overflow-hidden flex flex-col">
                 <video class="dep-video w-full aspect-[9/16] object-cover bg-black" controls preload="metadata">
-                    <source src="./assets/videos/depoimentos/Debora.mp4" type="video/mp4">
+                    <source src="./assets/videos/depoimentos/Debora.mp4#t=0.001" type="video/mp4">
                 </video>
                 <div class="p-5 border-t border-white/5">
                     <p class="font-bold text-white text-sm">Débora</p>
@@ -411,7 +411,7 @@
             </div>
             <div class="aba-card p-0 overflow-hidden flex flex-col">
                 <video class="dep-video w-full aspect-[9/16] object-cover bg-black" controls preload="metadata">
-                    <source src="./assets/videos/depoimentos/marcio.mp4" type="video/mp4">
+                    <source src="./assets/videos/depoimentos/marcio.mp4#t=0.001" type="video/mp4">
                 </video>
                 <div class="p-5 border-t border-white/5">
                     <p class="font-bold text-white text-sm">Márcio</p>
@@ -420,7 +420,7 @@
             </div>
             <div class="aba-card p-0 overflow-hidden flex flex-col">
                 <video class="dep-video w-full aspect-[9/16] object-cover bg-black" controls preload="metadata">
-                    <source src="./assets/videos/depoimentos/vinicius.mp4" type="video/mp4">
+                    <source src="./assets/videos/depoimentos/vinicius.mp4#t=0.001" type="video/mp4">
                 </video>
                 <div class="p-5 border-t border-white/5">
                     <p class="font-bold text-white text-sm">Vinícius</p>
@@ -433,7 +433,7 @@
         <div class="flex flex-col md:flex-row justify-center gap-6 mt-6 reveal">
             <div class="aba-card p-0 overflow-hidden flex flex-col md:w-[calc(33.333%-12px)]">
                 <video class="dep-video w-full aspect-[9/16] object-cover bg-black" controls preload="metadata">
-                    <source src="./assets/videos/depoimentos/Criativo ABA - Aplicou e aumentou 50% do faturamento.mp4" type="video/mp4">
+                    <source src="./assets/videos/depoimentos/Criativo ABA - Aplicou e aumentou 50% do faturamento.mp4#t=0.001" type="video/mp4">
                 </video>
                 <div class="p-5 border-t border-white/5">
                     <p class="font-bold text-white text-sm">Depoimento ABA</p>
@@ -442,7 +442,7 @@
             </div>
             <div class="aba-card p-0 overflow-hidden flex flex-col md:w-[calc(33.333%-12px)]">
                 <video class="dep-video w-full aspect-[9/16] object-cover bg-black" controls preload="metadata">
-                    <source src="./assets/videos/depoimentos/Criativo ABA - Depoimento Recorde de Vendas.mp4" type="video/mp4">
+                    <source src="./assets/videos/depoimentos/Criativo ABA - Depoimento Recorde de Vendas.mp4#t=0.001" type="video/mp4">
                 </video>
                 <div class="p-5 border-t border-white/5">
                     <p class="font-bold text-white text-sm">Depoimento ABA</p>
@@ -522,21 +522,6 @@
         { threshold: 0.1 }
     );
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Thumbnails automáticos dos depoimentos (captura frame 1s via canvas)
-    document.querySelectorAll('.dep-video').forEach(function(v) {
-        v.addEventListener('loadedmetadata', function() {
-            this.currentTime = 1;
-        });
-        v.addEventListener('seeked', function handler() {
-            var c = document.createElement('canvas');
-            c.width = this.videoWidth;
-            c.height = this.videoHeight;
-            c.getContext('2d').drawImage(this, 0, 0);
-            try { this.poster = c.toDataURL('image/jpeg', 0.8); } catch(e) {}
-            this.removeEventListener('seeked', handler);
-        });
-    });
 
     // Carrossel fotos
     const photoTrack  = document.getElementById('photoTrack');
