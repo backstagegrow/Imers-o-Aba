@@ -12,5 +12,6 @@ function copyDir(src, dest) {
 
 fs.mkdirSync('dist', { recursive: true });
 fs.copyFileSync('index.html', 'dist/index.html');
+fs.copyFileSync('index-b.html', 'dist/index-b.html');
 copyDir('assets', 'dist/assets');
 console.log('Build OK → dist/');
